@@ -1,0 +1,21 @@
+{% extends 'home.html'%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% block content %}
+    <h1>Nice to meet you {{name}}</h1>
+    <form action="add" method="post">
+        {% csrf_token %}
+        <input type="text" placeholder="Enter the first number:" name="n1">
+        <input type="text" placeholder="Enter the second number" name="n2">
+        <input type="submit">
+    </form>
+    {% endblock %}
+</body>
+</html>
